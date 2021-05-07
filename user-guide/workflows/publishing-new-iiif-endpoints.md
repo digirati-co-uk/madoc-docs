@@ -1,0 +1,2 @@
+# Publishing new IIIF endpoints
+
