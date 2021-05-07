@@ -25,6 +25,3 @@ Madoc is a platform that enables you to run both crowdsourcing and machine-assis
 * [ ] Making contributions
 * [ ] Browsing the site
 * [ ] Search
-
-
-
