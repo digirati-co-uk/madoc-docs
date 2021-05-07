@@ -1,0 +1,2 @@
+# Viewing outputs in Mirador
+
