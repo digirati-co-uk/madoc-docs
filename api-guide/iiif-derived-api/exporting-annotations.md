@@ -78,11 +78,11 @@ This endpoint supports multiple query parameters.
   </tbody>
 </table>
 
-### **Example requests**
+## **Example requests**
 
 These examples are long and consist of a few contributions from a few projects.
 
-#### Returning full published capture models
+### Returning full published capture models
 
 ```javascript
 {
@@ -344,7 +344,7 @@ These examples are long and consist of a few contributions from a few projects.
 }
 ```
 
-#### Serialising models as JSON
+### Serialising models as JSON
 
 From the original capture model this is the content we are interested in, the user contribution. Each model is stand-alone and resistant to change from other parts of the system. It also contains information about who created it and a who contributed to what part. We don't need all of this information in the end.
 
@@ -374,7 +374,7 @@ From the original capture model this is the content we are interested in, the us
 }
 ```
 
-#### Open annotations
+### Open annotations
 
 Here you can see that the annotation has been returned as an Open Annotation list. This capture model did not have a specific selector and so targets the whole canvas. If you set `selector=true` then this annotation will disappear and only annotations with selectors will be returned. Also note that the empty annotations have been filtered out – where they remain when serialised to JSON.
 
@@ -399,7 +399,7 @@ Here you can see that the annotation has been returned as an Open Annotation lis
 }
 ```
 
-#### W3C Annotations
+### W3C Annotations
 
 Very similar to the above but in the W3C Annotation format.
 
@@ -424,9 +424,9 @@ Very similar to the above but in the W3C Annotation format.
 }
 ```
 
-#### W3C Annotation pages
+### W3C Annotation pages
 
-This response is slightly different. It will use the metadata from the projects to pull together W3C Annotation pages that can then be dereferenced. 
+This response is slightly different. It will use the metadata from the projects to pull together W3C Annotation pages that can then be dereferenced.
 
 ```javascript
 {

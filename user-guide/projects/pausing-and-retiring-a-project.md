@@ -8,5 +8,3 @@ You can still navigate to your project as an administrator to see how the projec
 
 ![](../../.gitbook/assets/screenshot-2021-05-06-at-17.24.39.png)
 
-
-

@@ -55,9 +55,9 @@ import { useSiteConfiguration } from '../features/SiteConfigurationContext';
 
 const MyComponent: React.FC = () => {
   const config = useConfiguration();
-  
+
   const ourValue = config.project.defaultEditorOrientation; // we just added.
-  
+
   // ...
 }
 ```

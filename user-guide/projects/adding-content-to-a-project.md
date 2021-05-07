@@ -1,6 +1,6 @@
 # Adding content to a project
 
-From the project overview, if you click on "Content" you can add new collections to your project. Currently projects require that any content that is added to a project already exists in a collection. If you have only imported manifests into Madoc you can see how to create a new collection [here](../managing-iiif/collections.md). 
+From the project overview, if you click on "Content" you can add new collections to your project. Currently projects require that any content that is added to a project already exists in a collection. If you have only imported manifests into Madoc you can see how to create a new collection [here](../managing-iiif/collections.md).
 
 ![](../../.gitbook/assets/screenshot-2020-09-03-at-22.22.31.png)
 

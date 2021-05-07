@@ -34,11 +34,11 @@ Each service requires a database or schema in a database, a username and passwor
 
 These are referenced in the docker compose. There are 2 ways to connect Madoc to an external Postgres. You can create a single database with multiple schemas, or you can split into multiple databases. The docker-compose is an example of the former, where a single database is created \(`postgres`\) and then a schema created for each service, and a role/user with access to that particular schema.
 
-Each service from the list can be configured with different environment variables if you decide to configure the database differently. 
+Each service from the list can be configured with different environment variables if you decide to configure the database differently.
 
 An example provisioning script can be found [here](https://github.com/digirati-co-uk/madoc-platform/blob/v2/services/shared-postgres/entrypoint.sh) that takes you through the steps of using and creating the required roles, extensions and schemas.
 
-#### Database extensions
+### Database extensions
 
 The following extensions are required by various services:
 
@@ -47,9 +47,9 @@ The following extensions are required by various services:
 | `uuid-ossp` | Allows us to index using UUIDs | `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";` |
 | `ltree` | Efficient storing of nested elements, used for creating indexes. | `CREATE EXTENSION IF NOT EXISTS "ltree";` |
 
-#### Role search path
+### Role search path
 
-When you create a user or role in Postgres you can also set a default search path. 
+When you create a user or role in Postgres you can also set a default search path.
 
 ```text
 ALTER ROLE $ROLE_NAME SET search_path TO $SCHEMA_NAME, public;
@@ -57,15 +57,15 @@ ALTER ROLE $ROLE_NAME SET search_path TO $SCHEMA_NAME, public;
 
 Although this may not be required - this is how the services are tested and would be recommended.
 
-#### Database schemas
+### Database schemas
 
 All of our services will bootstrap themselves if provided with database credentials on first start up, they will also migrate themselves if any schemas change. There is no requirement to add any tables or data when you create the database.
 
-### Docker image reference
+## Docker image reference
 
 This is a verbose reference for the environment variables required for Postgres for each of the services. A fully up-to-date version of this can be derived from the [docker-compose ](https://github.com/digirati-co-uk/madoc-platform/blob/v2/docker-compose.yml)in the main Madoc repository. You can also see the default values of these match up to the environment variables listed above.
 
-#### Madoc TS
+### Madoc TS
 
 | Environment variable | Description |
 | :--- | :--- |
@@ -76,7 +76,7 @@ This is a verbose reference for the environment variables required for Postgres 
 | `DATABASE_SCHEMA` | Schema that will be used when connecting to Postgres. |
 | `DATABASE_PASSWORD` | Password matching the role that will be used to connect to Postgres. |
 
-#### Tasks API
+### Tasks API
 
 | Environment variable | Description |
 | :--- | :--- |
@@ -87,7 +87,7 @@ This is a verbose reference for the environment variables required for Postgres 
 | `DATABASE_SCHEMA` | Schema that will be used when connecting to Postgres. |
 | `DATABASE_PASSWORD` | Password matching the role that will be used to connect to Postgres. |
 
-#### Model API
+### Model API
 
 | Environment variable | Description |
 | :--- | :--- |
@@ -98,7 +98,7 @@ This is a verbose reference for the environment variables required for Postgres 
 | `DATABASE_SCHEMA` | Schema that will be used when connecting to Postgres. |
 | `DATABASE_PASSWORD` | Password matching the role that will be used to connect to Postgres. |
 
-#### Config service
+### Config service
 
 | Environment variable | Description |
 | :--- | :--- |
@@ -115,6 +115,4 @@ Note: the `DATABASE_URL` can be made using existing environment variables:
 ```text
 postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@shared-postgres:${POSTGRES_PORT}/${POSTGRES_DB}
 ```
-
-
 

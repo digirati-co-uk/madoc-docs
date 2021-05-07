@@ -11,5 +11,5 @@ There are 2 main sections of a model. The first is the document. Each image you 
 
 A contributor may be able to add multiple instances of each of these fields and entities. Your document may contain a lot of different fields that could be crowdsourced. To manage this and avoid a single large form being presented to the user the document is split up using a Structure. A structure is a subset of the fields from the document. This drives a navigation so the user can decide what they want to contribute and then only see the fields for that thing.
 
-Check the [Capture models](../capture-models/) section for an in-depth look at creating models. 
+Check the [Capture models](../capture-models/) section for an in-depth look at creating models.
 

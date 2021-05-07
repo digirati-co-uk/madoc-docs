@@ -40,5 +40,3 @@ A task from the Tasks API is returned. This can be polled to get status of the i
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-

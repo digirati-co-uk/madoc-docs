@@ -11,10 +11,10 @@ The final tab is the "Crowdsourcing" tab. This is where you can see all of the t
       * **Canvas crowdsourcing review** - All of the reviews for this manifest
 
 {% hint style="warning" %}
-This is intended to be a troubleshooting tool at the moment and contains some technical debugging information. 
+This is intended to be a troubleshooting tool at the moment and contains some technical debugging information.
 {% endhint %}
 
-This information is also available on the frontend of the site, but can be useful to quickly see if a particular manifest has been worked on. 
+This information is also available on the frontend of the site, but can be useful to quickly see if a particular manifest has been worked on.
 
 You can also see an overview of your projects progress on the "Overview" tab.
 

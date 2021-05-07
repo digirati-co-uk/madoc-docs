@@ -1,10 +1,10 @@
 # Users
 
-In order to manage users you must be a global administrator. Users are managed through the [Omeka administration page](../administration-pages.md#omeka-admin-page). 
+In order to manage users you must be a global administrator. Users are managed through the [Omeka administration page](../administration-pages.md#omeka-admin-page).
 
-### Creating a new user
+## Creating a new user
 
-From the Omeka administration interface, you can access the current list of users from the "Users" link in the menu. 
+From the Omeka administration interface, you can access the current list of users from the "Users" link in the menu.
 
 ![](../.gitbook/assets/screenshot-2020-09-02-at-21.21.21.png)
 
@@ -16,7 +16,7 @@ You will be prompted to fill in some basic information for the user. You can cho
 
 This is the default way of adding users in Omeka. However this can make it hard to invite users or open up registrations.
 
-#### Adding a user to a site
+### Adding a user to a site
 
 Once you have created a user, you need to give that user access to a give site. From the admin page, if you click on "Sites" and then choose your site from the list you will be able to see the following menu:
 
@@ -32,17 +32,17 @@ You can also click on the red icon to remove a user from a site.
 Due to the way that authentication is handled on Madoc a user who has had their permissions removed from a site may still be able to access the site for a few hours before their session expires. Similarly, if you add new permissions for a user, they may have to logout and log back in to see the new permissions.
 {% endhint %}
 
-### Inviting users to projects
+## Inviting users to projects
 
-When you choose a site in the admin, you will also see on the left side an option for invitations. 
+When you choose a site in the admin, you will also see on the left side an option for invitations.
 
 ![](../.gitbook/assets/screenshot-2020-09-02-at-21.29.13.png)
 
-The invitations page will take you through the steps you need to do in order to enable invitations. This includes enabling registrations on at least one public site for the user to register. 
+The invitations page will take you through the steps you need to do in order to enable invitations. This includes enabling registrations on at least one public site for the user to register.
 
 You can also generate invitation links from this page that can be shared. This will allow users with a link to register to your site - if the registrations are not open.
 
-### Customising roles
+## Customising roles
 
 The roles on the site are as follows:
 

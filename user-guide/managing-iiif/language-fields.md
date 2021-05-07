@@ -1,6 +1,6 @@
 # Language fields
 
-Any labels or metadata that is imported into Madoc is imported with a language associated with each value. If your content has multi-lingual labels, these will be detected. This is done by upgrading IIIF to the latest presentation version before processing. 
+Any labels or metadata that is imported into Madoc is imported with a language associated with each value. If your content has multi-lingual labels, these will be detected. This is done by upgrading IIIF to the latest presentation version before processing.
 
 {% tabs %}
 {% tab title="Input Manifest" %}
@@ -33,6 +33,4 @@ As a result every field in your IIIF can be translated. This is built into the f
 {% hint style="warning" %}
 We are still working on the UX of editing these language fields
 {% endhint %}
-
-
 
