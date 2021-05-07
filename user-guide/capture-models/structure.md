@@ -21,3 +21,72 @@ A choice is simply a group of other choices and models displayed as selectable o
 
 A model is a form, from a users perspective. The model contains a list of the fields from the **document** that should be shown in the form.
 
+### Examples
+
+Default single choice.
+
+{% tabs %}
+{% tab title="Structure" %}
+```javascript
+{
+  "id": "9c2c6558-703d-4276-ac44-01c78e66ecef",
+  "type": "model",
+  "label": "Default",
+  "fields": [
+    "firstName",
+    "familyName"
+  ]
+}
+```
+{% endtab %}
+
+{% tab title="Model short hand" %}
+```javascript
+{
+  "firstName": "text-field",
+  "familyName": "text-field"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Splitting the same document into 2 choices.
+
+{% tabs %}
+{% tab title="Structure" %}
+```javascript
+{
+  "id": "db314a02-b857-430a-98dd-0f49d12dd978",
+  "type": "choice",
+  "label": "Choose something",
+  "items": [
+    {
+      "id": "9c2c6558-703d-4276-ac44-01c78e66ecef",
+      "type": "model",
+      "label": "First name",
+      "description": "Fill out the first name",
+      "fields": [
+        "firstName"
+      ]
+    },
+    {
+      "id": "c46f3fcb-6ecc-46b2-8bee-5adf1c874da4",
+      "type": "model",
+      "label": "Family name",
+      "description": "Fill out the family name",
+      "fields": [
+        "familyName"
+      ]
+    }
+  ]
+}
+```
+{% endtab %}
+
+{% tab title="User interface" %}
+![](../../.gitbook/assets/screenshot-2021-05-07-at-11.08.44.png)
+{% endtab %}
+{% endtabs %}
+
+This is not a realistic example as these two fields would be better inside of a single contribution. 
+

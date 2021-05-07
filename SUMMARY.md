@@ -30,6 +30,7 @@
   * [Structure](user-guide/capture-models/structure.md)
   * [Creating models in the UI](user-guide/capture-models/previewing.md)
 * [Reviews](user-guide/reviews/README.md)
+  * [Creating reviews](user-guide/reviews/creating-reviews.md)
   * [Navigating reviews](user-guide/reviews/navigating-reviews.md)
   * [Approving or rejecting](user-guide/reviews/approving-or-rejecting.md)
   * [Multiple submissions](user-guide/reviews/multiple-submissions.md)

@@ -4,12 +4,12 @@
 
 The primary building block for content in Madoc is IIIF \(International Image Interoperability Framework™\). IIIF is a set of open standards for standardising access to images and collections of images. There are 3 primary building blocks that make up IIIF.
 
-### In this section
+### Jump to section
 
-* [Creating IIIF collections](collections.md#creating-a-new-collection)
-* [Importing IIIF collections](collections.md#importing-an-existing-collection)
-* [Importing IIIF Manifests](manifests.md#importing-an-existing-manifest)
-* [Managing canvases](canvases.md)
+* \*\*\*\*[**Creating IIIF collections**](collections.md#creating-a-new-collection)\*\*\*\*
+* \*\*\*\*[**Importing IIIF collections**](collections.md#importing-an-existing-collection)\*\*\*\*
+* \*\*\*\*[**Importing IIIF Manifests**](manifests.md#importing-an-existing-manifest)\*\*\*\*
+* \*\*\*\*[**Managing canvases**](canvases.md)\*\*\*\*
 
 #### Canvas
 
