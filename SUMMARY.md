@@ -20,6 +20,7 @@
   * [Adding content to a project](user-guide/projects/adding-content-to-a-project.md)
   * [Editing the projects model](user-guide/projects/editing-the-projects-model.md)
   * [Visualising project progress](user-guide/projects/visualising-project-progress.md)
+  * [Personal notes](user-guide/projects/personal-notes.md)
 * [Capture models](user-guide/capture-models/README.md)
   * [Document](user-guide/capture-models/document.md)
   * [Structure](user-guide/capture-models/structure.md)
