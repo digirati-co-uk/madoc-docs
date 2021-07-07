@@ -8,11 +8,11 @@ Project templates are a way to customise, extend or limit how projects are creat
 
 Project templates are split into 2 sections. Static and dynamic. Static is serialisable configuration that can be represented as static JSON. Dynamic parts of the configuration are code that runs at different times in the lifecycle of a project. This PR is primarily focussed on the static configuration.
 
-### Static configuration
+## Static configuration
 
-To demonstrate how this configuration works, a "kitchen sink" has been put together.
+To demonstrate how this configuration works, a "kitchen sink" has been put together
 
-**Required fields.**
+### Required fields.
 
 In order to be a valid project template the minimum fields are the following:
 
@@ -43,7 +43,7 @@ Optional metadata can also be added:
 
 These fields will be used to make using your project template better for end-users. \(note: plugins will soon support local assets for the thumbnail field\).
 
-**Capture model**
+### Capture model
 
 You can configure a project template to be loaded with a default capture model \(document\), with an initial set of fields populated. You have additional piece of configuration if you want to further limit how much of the capture model can be changed. This can be useful if you want to export the data and have well-known fields.
 
@@ -78,7 +78,7 @@ You can configure a project template to be loaded with a default capture model \
 
 _Note: You can only select the document, a default structure will be created for you. We may in future open up custom structures into this configuration_
 
-**Configuration**
+### Configuration
 
 In addition to the capture model configuration, you can also set the default site configuration and limit changes to the configuration or individual fields required to make your template work.
 
@@ -102,7 +102,7 @@ In addition to the capture model configuration, you can also set the default sit
 }
 ```
 
-**Statuses**
+### Statuses
 
 Projects can have different statuses, each with a number. By default they are as follows:
 
@@ -139,7 +139,7 @@ You can change the wording, colours and messaging from the project template.
 
 Note: You can specify a background colour and an accessible text colour will be chosen for you.
 
-**Activity streams**
+### Activity streams
 
 You can disable activity streams both functionally and in the UI:
 
@@ -167,7 +167,7 @@ You can disable activity streams both functionally and in the UI:
 }
 ```
 
-**Slots**
+### Slots
 
 There is not enough time to cover everything that can be done with slots, but in a nutshell when a project is created you can pre-load some slots and blocks that will appear only on the project. If your project template is coming from a plugin you can use this to automatically load your own custom blocks. The specification for slots and blocks will be covered elsewhere.
 
@@ -214,7 +214,7 @@ The following example configuration will add a custom HTML block to each manifes
 }
 ```
 
-**Theme**
+### Theme
 
 If you want to extend the current theme \(for a wider page for example\) you can make adjustments that will be merged.
 
@@ -234,7 +234,7 @@ You have access to all of the same variables as regular themes. In this example 
 
 _Note: Themes customisation is not widely available on components in Madoc yet, but header, footer and layouts should be customisable_
 
-### Dynamic configuration
+## Dynamic configuration
 
 **NOTE: This is still a work in progress and has not been fully implemented**
 
@@ -260,13 +260,13 @@ const myTemplate = {
 }
 ```
 
-**Setup functions**
+### Setup functions
 
 * `onCreateConfiguration` - this is called when the default configuration for the site is created. You are passed the project configuration object before it is saved. It will be a combination of the default configuration, the site configuration and any overrides you specify in your template in the static configuration. Every value should be available here so you can inspect and change any configuration.
 * `beforeForkDocument` - This is called before the capture model is saved. It will contain a reference to the original capture model template so you cannot change any properties on the document passed in, but you can return a new document and this will be used instead.
 * `onCreateProject` - Once the project is fully created this will be called with the project. 
 
-**Hooks**
+### Hooks
 
 This is a provisional list of hooks yet to be implemented. When each hook is called should be self explanatory.
 
@@ -285,19 +285,26 @@ This is a provisional list of hooks yet to be implemented. When each hook is cal
 * `onCreateReview` - When a review is created.
 * `onAssignReview` - When a reviewer is assigned to a review.
 
-### Misc
+## Misc
 
 * `setupModel` - this will be a capture model that you can specify that will be shown to the user as they are creating a project. The output of these choices will be available in the setup functions.
 * `components.customEditor` - Instead of a capture model, this will replace the project creation with a custom React component. The component will be passed functions for creating the project. This will enable very fine control of the project creation process.
 
-### Project templates from content
+## Project templates from content
 
 Not covered in this document or pull request is the ability to create a project from a manifest or a collection. This will make it much easier to get started with projects quickly. Ideally when you are on a manifest and you choose "Create transcription project" or "Crowdsource OCR corrections" from a manifest or collection page it will give the user the option to either create a fresh new project or add it to an existing project of the same type \(i.e. same project template\).
 
+
+
 ### Full example
 
+A full example using Typescript + madoc helper library in a plugin.
+
 ```typescript
-const kitchenSinkTemplate: ProjectTemplate = {
+import { captureModelShorthand } from '@madoc.io/types';
+import { ProjectTemplate } from '@madoc.io/types/dist/extensions/projects/types';
+
+export const kitchenSinkTemplate: ProjectTemplate = {
   type: 'kitchen-sink',
   metadata: {
     label: 'Kitchen sink template',
@@ -342,6 +349,10 @@ const kitchenSinkTemplate: ProjectTemplate = {
       preventChangeDocument: true,
       preventChangeStructure: true,
     },
+    // Disabled this option for now.
+    // slots: {
+    //   immutable: false,
+    // },
     status: {
       defaultStatus: 1,
       statusMap: {
@@ -385,6 +396,62 @@ const kitchenSinkTemplate: ProjectTemplate = {
       },
     },
   },
+  setup: {
+    async onCreateConfiguration(projectConfig, { options }: { options: { customField: string } }) {
+      console.log('onCreateConfiguration', { projectConfig, options });
+    },
+    async beforeForkDocument(doc) {
+      console.log('beforeForkDocument', doc);
+    },
+    async onCreateProject(...args) {
+      console.log('onCreateProject', args);
+    },
+  },
+  hooks: {
+    async onCreateUserRevisionSession(...args) {
+      console.log('onCreateUserRevisionSession', args);
+    },
+    async onAddContentToProject(...args) {
+      console.log('onAddContentToProject', args);
+    },
+    async onRemoveContentFromProject(...args) {
+      console.log('onRemoveContentFromProject', args);
+    },
+    async canContentBeAddedToProject(...args) {
+      console.log('canContentBeAddedToProject', args);
+      return true;
+    },
+    async onProjectStatus(...args) {
+      console.log('onProjectStatus', args);
+    },
+    async onLoadRevision(...args) {
+      console.log('onLoadRevision', args);
+    },
+    async beforeSaveRevision(...args) {
+      console.log('beforeSaveRevision', args);
+    },
+    async beforeCloneModel(...args) {
+      console.log('beforeCloneModel', args);
+    },
+    async onSubmitRevision(...args) {
+      console.log('onSubmitRevision', args);
+    },
+    async onRevisionApproved(...args) {
+      console.log('onRevisionApproved', args);
+    },
+    async onRevisionRejected(...args) {
+      console.log('onRevisionRejected', args);
+    },
+    async onResourceComplete(...args) {
+      console.log('onResourceComplete', args);
+    },
+    async onCreateReview(...args) {
+      console.log('onCreateReview', args);
+    },
+    async onAssignReview(...args) {
+      console.log('onAssignReview', args);
+    },
+  },
   theme: {
     custom: {
       header: {
@@ -394,4 +461,6 @@ const kitchenSinkTemplate: ProjectTemplate = {
   },
 };
 ```
+
+ 
 
