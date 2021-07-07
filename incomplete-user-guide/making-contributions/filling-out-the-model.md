@@ -1,8 +1,8 @@
 # Filling out the model
 
-### Filling out the fields
+## Filling out the fields
 
-### Changing the position of the window
+## Changing the position of the window
 
-### Using the transcription tool
+## Using the transcription tool
 

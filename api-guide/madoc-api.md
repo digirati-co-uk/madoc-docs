@@ -28,7 +28,7 @@ Numeric identifier or slug of project
 You will always be returned a note if the user is able to make a note. If no note exists in the database, an empty note will be returned.
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "note": "A note made by a user"
 }
@@ -72,7 +72,7 @@ The updated note
 No body will be returned after creation.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

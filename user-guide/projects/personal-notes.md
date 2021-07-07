@@ -8,7 +8,7 @@ Under project settings there is an option to allow users to make their own notes
 
 ![](../../.gitbook/assets/screenshot-2021-05-18-at-13.52.38.png)
 
-When enabled on a project, each canvas will have a space where users will be able to take notes for each image inside each manifest. 
+When enabled on a project, each canvas will have a space where users will be able to take notes for each image inside each manifest.
 
 ![Personal notes are available in the sidebar](../../.gitbook/assets/screenshot-2021-05-18-at-13.54.16.png)
 

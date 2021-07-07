@@ -1,14 +1,14 @@
 # Site navigation
 
-### User dashboard
+## User dashboard
 
-### Navigating your tasks
+## Navigating your tasks
 
-### Browsing collections
+## Browsing collections
 
-### Browsing manifests
+## Browsing manifests
 
-### Browsing projects
+## Browsing projects
 
-### Viewing canvases
+## Viewing canvases
 

@@ -1,12 +1,12 @@
 # Task reference
 
-### Importing tasks
+## Importing tasks
 
-### Crowdsourcing tasks
+## Crowdsourcing tasks
 
-### Reviewing tasks
+## Reviewing tasks
 
-### OCR Tasks
+## OCR Tasks
 
-### Custom tasks
+## Custom tasks
 
