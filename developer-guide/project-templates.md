@@ -6,11 +6,9 @@ description: API definition for creating project templates
 
 Project templates are a way to customise, extend or limit how projects are created and allow reuse of configurations for multiple projects. Eventually you will be able to create these templates from inside Madoc from existing projects. \(static, not dynamic - see further down for the distinction\).
 
-Project templates are split into 2 sections. Static and dynamic. Static is serialisable configuration that can be represented as static JSON. Dynamic parts of the configuration are code that runs at different times in the lifecycle of a project. This PR is primarily focussed on the static configuration.
-
 ## Static configuration
 
-To demonstrate how this configuration works, a "kitchen sink" has been put together
+Project templates are split into 2 sections. Static and dynamic. Static is serialisable configuration that can be represented as static JSON. Dynamic parts of the configuration are code that runs at different times in the lifecycle of a project. This PR is primarily focussed on the static configuration.
 
 ### Required fields.
 
