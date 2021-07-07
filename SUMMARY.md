@@ -92,6 +92,7 @@
 * [Customising site pages](developer-guide/customising-site-pages.md)
 * [Shared postgres](developer-guide/shared-postgres.md)
 * [Adding new project config](developer-guide/adding-site-configuration.md)
+* [Project templates](developer-guide/project-templates.md)
 
 ## API Guide
 
