@@ -167,7 +167,7 @@ You can disable activity streams both functionally and in the UI:
 
 ### Slots
 
-There is not enough time to cover everything that can be done with slots, but in a nutshell when a project is created you can pre-load some slots and blocks that will appear only on the project. If your project template is coming from a plugin you can use this to automatically load your own custom blocks. The specification for slots and blocks will be covered elsewhere.
+When a project is created you can pre-load some slots and blocks that will appear only on the project. If your project template is coming from a plugin you can use this to automatically load your own custom blocks. The specification for slots and blocks will be covered elsewhere.
 
 There are 4 contexts you can load slots into:
 
