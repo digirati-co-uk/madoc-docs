@@ -266,7 +266,7 @@ const myTemplate = {
 
 ### Hooks
 
-This is a provisional list of hooks yet to be implemented. When each hook is called should be self explanatory.
+This is a provisional list of hooks yet to be implemented. 
 
 * `onCreateUserRevisionSession` - This will be called when a user first lands on an annotation page. You can return any mutable object from here and it will be passed to other hooks on this page. This allows for some shared state between your hooks.
 * `onAddContentToProject` - Called when a new manifest or collection is added to a project
