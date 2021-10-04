@@ -112,12 +112,6 @@ For a given resource id \(IIIF\) it will return a list of unique labels in the m
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-headers %}
 {% api-method-parameter name="jwt scope" type="string" required=true %}
 site.admin
@@ -172,7 +166,7 @@ List of unique labels and number of occurrences.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/api/madoc/iiif/metadata-values" %}
+{% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/metadata-values" %}
 {% api-method-summary %}
 Metadata values
 {% endapi-method-summary %}
@@ -238,7 +232,7 @@ Returns all of the values for the given Metadata key/label. Ordered by frequency
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/api/madoc/iiif/canvases/:canvas\_id/metadata" %}
+{% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/canvases/:canvas\_id/metadata" %}
 {% api-method-summary %}
 Canvas metadata
 {% endapi-method-summary %}
@@ -292,7 +286,7 @@ Returns all of the metadata in a flat list \(see data model\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/api/madoc/iiif/manifests/:manifest\_id/metadata" %}
+{% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/manifests/:manifest\_id/metadata" %}
 {% api-method-summary %}
 Manifest metadata
 {% endapi-method-summary %}
@@ -465,7 +459,7 @@ site.read
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="" path="/api/madoc/iiif/collections/:collection\_id/metadata" %}
+{% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/collections/:collection\_id/metadata" %}
 {% api-method-summary %}
 Collection metadata
 {% endapi-method-summary %}
@@ -517,7 +511,7 @@ site.read
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="/api/madoc/iiif/:type/:id/metadata" %}
+{% api-method method="put" host="https://my-site.madoc.io" path="/api/madoc/iiif/:type/:id/metadata" %}
 {% api-method-summary %}
 Update metadata
 {% endapi-method-summary %}
