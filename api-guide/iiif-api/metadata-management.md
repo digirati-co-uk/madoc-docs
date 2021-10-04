@@ -101,7 +101,7 @@ The reading endpoints for IIIF
 
 
 
-{% api-method method="get" host="" path="/api/madoc/iiif/metadata-keys" %}
+{% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/metadata-keys" %}
 {% api-method-summary %}
 Metadata keys
 {% endapi-method-summary %}
