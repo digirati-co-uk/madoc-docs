@@ -1,4 +1,4 @@
-# Getting started
+# Documentation
 
 ## **What is Madoc?**
 

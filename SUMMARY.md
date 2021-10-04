@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Getting started](README.md)
+* [Documentation](README.md)
 * [Administration pages](administration-pages.md)
 
 ## User guide
