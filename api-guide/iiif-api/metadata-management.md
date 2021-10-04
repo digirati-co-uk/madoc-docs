@@ -517,3 +517,92 @@ site.read
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="put" host="" path="/api/madoc/iiif/:type/:id/metadata" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="integer" required=true %}
+Numeric ID of resource
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+collections , manifests or canvases
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="modified" type="array" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="removed" type="array" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="added" type="array" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+Updating Metadata uses 3 mechanisms for granular updates. 
+
+* **Modified** - array of fields using the data model above, must include a numeric ID
+* **Removed** - array of numeric IDs to be removed
+* **Added** - array of fields, without a numeric ID
+
+```javascript
+{
+	"added": [
+		{ "language": "en", "value": "some value", "key": "label" }
+	],
+	"removed": [ 456, 789 ],
+	"modified": [
+		{ "id": 123, "language": "en", "value": "another value", "key": "label" }	
+	]
+}
+```
+
+This acts like a batch-api, running all of the operations in a single transaction. 
+
+{% hint style="warning" %}
+One **limitation** of the metadata modelling is the order of values. For example, if you wanted to generate the following metadata value:
+
+```javascript
+{
+  "label": {
+    "en": [
+      "Line one of the label",
+      "Line two of the label"
+    ]
+  }
+}
+```
+
+The ordering of the first and second value would not be defined. They would be shown in the order they came out of the database. This limitation could be worked around in the future with a sort-key.
+{% endhint %}
+
+This API can be used to update metadata on any canvas, manifest or collection. 
+
