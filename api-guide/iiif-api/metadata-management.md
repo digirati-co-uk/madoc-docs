@@ -87,19 +87,31 @@ These rows are transformed into IIIF-compliant language fields when requesting s
 | **edited** | This indicates that the value has been updated in Madoc. Usually sets `auto_update` to false once updated. |
 | **data** | Unstructured JSON field, could be used to store useful information about the field. Currently unused. |
 
+### React-based editor
 
+To present the user with a general purpose Metadata editor you can use the `<MetadataListEditor />`
 
-### API Endpoints
+{% hint style="info" %}
+There is a Github discussion open for improvements to the UI/UX of this editor [here](https://github.com/digirati-co-uk/madoc-platform/discussions/458)
+{% endhint %}
 
-The following API endpoints are currently only accessible from a JWT with a `site.admin` scope. 
+```jsx
+<MetadataListEditor 
+  metadata={data} 
+  template={['label', 'summary']} 
+  onSave={({ diff, empty }) => {
+    if (!empty) {
+      doSomethingWithDiff(diff);
+    }
+  }} 
+/>
+```
 
-* Metadata keys
-* Metadata values
-* Update metadata
+* **metadata** - this is the list of values from any of the GET metadata endpoints. 
+* **template** - for the properties listed, a prompt will be shown to add a value \(see below\)
+* **onSave** - returns an object with 2 properties. `{diff: {}, empty: false}` the diff is the same format as the "Update metadata" request body and can be passed in. If empty is true, then no updates are required.
 
-The reading endpoints for IIIF 
-
-
+![Example of a template field.](../../.gitbook/assets/screenshot-2021-10-04-at-14.39.08.png)
 
 {% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/metadata-keys" %}
 {% api-method-summary %}
