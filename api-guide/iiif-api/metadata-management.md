@@ -519,7 +519,7 @@ site.read
 
 {% api-method method="put" host="" path="/api/madoc/iiif/:type/:id/metadata" %}
 {% api-method-summary %}
-
+Update metadata
 {% endapi-method-summary %}
 
 {% api-method-description %}
