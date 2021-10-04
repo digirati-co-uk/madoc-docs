@@ -98,6 +98,8 @@
 ## API Guide
 
 * [Madoc API](api-guide/madoc-api.md)
+* [IIIF API](api-guide/iiif-api/README.md)
+  * [Metadata management](api-guide/iiif-api/metadata-management.md)
 * [IIIF Import API](api-guide/iiif-import-api.md)
 * [IIIF Derived API](api-guide/iiif-derived-api/README.md)
   * [Exporting annotations](api-guide/iiif-derived-api/exporting-annotations.md)
