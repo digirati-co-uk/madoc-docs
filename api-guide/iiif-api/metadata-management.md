@@ -495,7 +495,7 @@ site.read
 
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "fields": [
     {
