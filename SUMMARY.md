@@ -97,6 +97,7 @@
 
 ## API Guide
 
+* [Getting started](api-guide/getting-started.md)
 * [Madoc API](api-guide/madoc-api.md)
 * [IIIF API](api-guide/iiif-api/README.md)
   * [Metadata management](api-guide/iiif-api/metadata-management.md)

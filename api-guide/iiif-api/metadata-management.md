@@ -113,6 +113,78 @@ There is a Github discussion open for improvements to the UI/UX of this editor [
 
 ![Example of a template field.](../../.gitbook/assets/screenshot-2021-10-04-at-14.39.08.png)
 
+### Madoc JS API
+
+All of the endpoints listed below are accessible in plugins or within Madoc through the [Madoc JS API](../getting-started.md#madoc-js-api).
+
+```jsx
+import { useApi } from '@madoc.io/types';
+
+function MyComponent() {
+  const api = useApi();
+  
+  // ...
+
+  // Metadata keys + values
+  await api.getMetadataKeys();
+  await api.getMetadataValues();
+  
+  // Fetching metadata
+  await api.getCanvasMetadata(canvasId);
+  await api.getManifestMetadata(manifestId);
+  await api.getCollectionMetadata(collectionId);
+  await api.getProjectMetadata(projectId);
+  
+  // Updating metadata
+  await api.updateCanvasMetadata(canvasId, diff);
+  await api.updateManifestMetadata(manifestId, diff);
+  await api.updateCollectionMetadata(collectionId, diff);
+  await api.updateProjectMetadata(projectId, diff);
+  
+  // ...
+}
+```
+
+The `GET` endpoints also have [React hooks](../getting-started.md#apihooks) available for quickly fetching 
+
+```jsx
+import { apiHooks } from '@madoc.io/types';
+
+function MyComponent() {
+  // Metadata keys + values
+  apiHooks.getMetadataKeys(() => []);
+  apiHooks.getMetadataValues(() => []);
+    
+  // Fetching metadata
+  apiHooks.getCanvasMetadata(() => [canvasId]);
+  apiHooks.getManifestMetadata(() => [manifestId]);
+  apiHooks.getCollectionMetadata(() => [collectionId]);
+  apiHooks.getProjectMetadata(() => [projectId]);
+  
+  // ...
+}
+```
+
+There are also public APIs for fetching metadata for IIIF. These can be used on pages where the user is not required to be logged in.
+
+```jsx
+import { useApi, apiHooks } from '@madoc.io/types';
+
+function MyComponent() {
+  const api = useApi();
+  
+  // Using the API.
+  await api.getSiteCanvasMetadata(canvasId);
+  await api.getSiteManifestMetadata(manifestId);
+  await api.getSiteCollectionMetadata(collectionId);
+  
+  // Using hooks.
+  apiHooks.getSiteCanvasMetadata(() => [canvasId]);
+  apiHooks.getSiteManifestMetadata(() => [manifestId]);
+  apiHooks.getSiteCollectionMetadata(() => [collectionId]);
+}
+```
+
 {% api-method method="get" host="https://my-site.madoc.io" path="/api/madoc/iiif/metadata-keys" %}
 {% api-method-summary %}
 Metadata keys
