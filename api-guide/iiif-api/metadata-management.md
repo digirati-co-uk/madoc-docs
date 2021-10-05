@@ -73,6 +73,44 @@ These rows are transformed into IIIF-compliant language fields when requesting s
 {% endtab %}
 {% endtabs %}
 
+Here is a full example with a set of rows and the resulting IIIF JSON that is created from it.
+
+| Key | Language | Value |
+| :--- | :--- | :--- |
+| `label` | en | EN label |
+| `label` | fr | FR label |
+| `requiredStatement.label` | en | Attribution |
+| `requiredStatement.value` | en | Some attribution |
+| `metadata.0.label` | en | Metadata label 1 |
+| `metadata.0.value` | en | Metadata value 1 |
+| `metadata.1.label` | en | Metadata value 2 |
+| `metadata.1.value` | en | Metadata value 2 |
+
+```javascript
+{
+  "label": {
+    "en": ["EN label"],
+    "fr": ["FR label"]
+  },
+  "requiredStatement": {
+    "label": {"en": ["Attribution"]},
+    "value": {"en": ["Some attribution"]}
+  },
+  "metadata": [
+    {
+      "label": { "en": ["Metadata label 1"] },
+      "value": { "en": ["Metadata value 1"] }
+    },
+    {
+      "label": { "en": ["Metadata label 2"] },
+      "value": { "en": ["Metadata value 2"] }
+    }
+  ]
+}
+```
+
+#### Full database schema
+
 | **Column** | **Description** |
 | :--- | :--- |
 | **id** | Numeric ID for the individual Metadata value |
