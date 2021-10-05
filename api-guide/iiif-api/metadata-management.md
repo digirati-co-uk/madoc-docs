@@ -4,7 +4,7 @@ description: Get and update metadata and descriptive properties in IIIF.
 
 # Metadata management
 
-IIIF Metadata and descriptive properties are stored in Madoc individually by the property they are assigned, language they are in and the position they appear if there are more than one.
+IIIF Metadata and descriptive properties are stored in Madoc by breaking them down into individual values and their associated language and their key in the data model. 
 
 When a piece of IIIF is imported into a site 2 copies of the metadata is stored:
 
