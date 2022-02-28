@@ -93,6 +93,7 @@
 * [Shared postgres](developer-guide/shared-postgres.md)
 * [Adding new project config](developer-guide/adding-site-configuration.md)
 * [Project templates](developer-guide/project-templates.md)
+* [Themes](developer-guide/themes.md)
 
 ## API Guide
 
@@ -106,4 +107,3 @@
 * [Okra API](api-guide/okra-api.md)
 * [Storage API](api-guide/storage-api.md)
 * [Search API](api-guide/search-api.md)
-

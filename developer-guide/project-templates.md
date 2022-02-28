@@ -4,7 +4,7 @@ description: API definition for creating project templates
 
 # Project templates
 
-Project templates are a way to customise, extend or limit how projects are created and allow reuse of configurations for multiple projects. Eventually you will be able to create these templates from inside Madoc from existing projects. \(static, not dynamic - see further down for the distinction\).
+Project templates are a way to customise, extend or limit how projects are created and allow reuse of configurations for multiple projects. Eventually you will be able to create these templates from inside Madoc from existing projects. (static, not dynamic - see further down for the distinction).
 
 Project templates are split into 2 sections. Static and dynamic. Static is serialisable configuration that can be represented as static JSON. Dynamic parts of the configuration are code that runs at different times in the lifecycle of a project. This PR is primarily focussed on the static configuration.
 
@@ -12,9 +12,11 @@ Project templates are split into 2 sections. Static and dynamic. Static is seria
 
 To demonstrate how this configuration works, a "kitchen sink" has been put together.
 
- Show full example configuration \`\`\`typescript const kitchenSinkTemplate: ProjectTemplate = { type: 'kitchen-sink', metadata: { label: 'Kitchen sink template', description: 'A kitchen sink project template', version: '1.0.0', actionLabel: 'Create kitchen sink', documentation: 'https://docs.madoc.io/', }, setupModel: captureModelShorthand\({ customField: 'text-field', }\), captureModel: captureModelShorthand\({ transcription: { type: 'text-field', multiline: true, minLines: 6, label: 'Transcription', }, }\), configuration: { defaults: { claimGranularity: 'canvas', contributionMode: 'annotation', shortExpiryTime: '15', metadataSuggestions: { manifest: true, canvas: true, collection: true, }, manifestPageOptions: { showIIIFLogo: true, }, }, frozen: true, immutable: \['claimGranularity', 'contributionMode'\], tasks: { generateOnCreate: false, generateOnNewContent: false, }, captureModels: { noCaptureModel: true, preventChangeDocument: true, preventChangeStructure: true, }, status: { defaultStatus: 1, statusMap: { 0: { color: 'red', label: 'Paused', action: 'Pause this project', info: 'This project is paused', }, }, disabled: false, }, activity: { noActivity: true, }, }, slots: { manifest: { 'common-breadcrumbs': { slotId: 'common-breadcrumbs', label: { none: \['Default breadcrumbs'\] }, layout: 'none', blocks: \[ { name: 'Display breadcrumbs', type: 'default.DisplayBreadcrumbs', static\_data: {}, lazy: false, order: 0, }, { lazy: false, name: 'Simple HTML block', type: 'simple-html-block', static\_data: { html: '
+&#x20;Show full example configuration&#x20;
 
-Testing this appears', }, order: 1, }, \], }, }, }, theme: { custom: { header: { headerBackground: 'blue', }, }, }, }; \`\`\`
+\`\`\`typescript const kitchenSinkTemplate: ProjectTemplate = { type: 'kitchen-sink', metadata: { label: 'Kitchen sink template', description: 'A kitchen sink project template', version: '1.0.0', actionLabel: 'Create kitchen sink', documentation: 'https://docs.madoc.io/', }, setupModel: captureModelShorthand({ customField: 'text-field', }), captureModel: captureModelShorthand({ transcription: { type: 'text-field', multiline: true, minLines: 6, label: 'Transcription', }, }), configuration: { defaults: { claimGranularity: 'canvas', contributionMode: 'annotation', shortExpiryTime: '15', metadataSuggestions: { manifest: true, canvas: true, collection: true, }, manifestPageOptions: { showIIIFLogo: true, }, }, frozen: true, immutable: \['claimGranularity', 'contributionMode'], tasks: { generateOnCreate: false, generateOnNewContent: false, }, captureModels: { noCaptureModel: true, preventChangeDocument: true, preventChangeStructure: true, }, status: { defaultStatus: 1, statusMap: { 0: { color: 'red', label: 'Paused', action: 'Pause this project', info: 'This project is paused', }, }, disabled: false, }, activity: { noActivity: true, }, }, slots: { manifest: { 'common-breadcrumbs': { slotId: 'common-breadcrumbs', label: { none: \['Default breadcrumbs'] }, layout: 'none', blocks: \[ { name: 'Display breadcrumbs', type: 'default.DisplayBreadcrumbs', static\_data: {}, lazy: false, order: 0, }, { lazy: false, name: 'Simple HTML block', type: 'simple-html-block', static\_data: { html: '
+
+Testing this appears', }, order: 1, }, ], }, }, }, theme: { custom: { header: { headerBackground: 'blue', }, }, }, }; \`\`\`
 
 ### Required fields.
 
@@ -45,11 +47,11 @@ Optional metadata can also be added:
 }
 ```
 
-These fields will be used to make using your project template better for end-users. \(note: plugins will soon support local assets for the thumbnail field\).
+These fields will be used to make using your project template better for end-users. (note: plugins will soon support local assets for the thumbnail field).
 
 ### Capture model
 
-You can configure a project template to be loaded with a default capture model \(document\), with an initial set of fields populated. You have additional piece of configuration if you want to further limit how much of the capture model can be changed. This can be useful if you want to export the data and have well-known fields.
+You can configure a project template to be loaded with a default capture model (document), with an initial set of fields populated. You have additional piece of configuration if you want to further limit how much of the capture model can be changed. This can be useful if you want to export the data and have well-known fields.
 
 * `noCaptureModel` will remove editing the model completely, allowing a potentially empty model
 * `preventChangeStructure` will remove the ability to change the models structure
@@ -118,7 +120,7 @@ Projects can have different statuses, each with a number. By default they are as
 
 You can change the wording, colours and messaging from the project template.
 
-* `configuration.status.disabled` - will remove the ability to see and change the status \(but can be changed through API\)
+* `configuration.status.disabled` - will remove the ability to see and change the status (but can be changed through API)
 * `configuration.status.defaultStatus` - When a project is created, this is what the status will be
 * `configuration.status.statusMap` - Customisations to the above.
 
@@ -180,7 +182,7 @@ There are 4 contexts you can load slots into:
 * **project** - blocks that will appear on the project page
 * **collection** - blocks that will appear on any collections within the project
 * **manifest** - blocks that will appear on any manifests within the project
-* **canvas** - blocks that will appear on any canvases \(and model pages\) with the project
+* **canvas** - blocks that will appear on any canvases (and model pages) with the project
 
 _Note: As of writing the canvas slot is not yet enabled_
 
@@ -220,11 +222,11 @@ The following example configuration will add a custom HTML block to each manifes
 
 ### Theme
 
-If you want to extend the current theme \(for a wider page for example\) you can make adjustments that will be merged.
+If you want to extend the current theme (for a wider page for example) you can make adjustments that will be merged.
 
 You have access to all of the same variables as regular themes. In this example we change the background of the header. These will only appear when you are inside of your project.
 
-```text
+```
 {
   "theme": {
     "custom": {
@@ -268,7 +270,7 @@ const myTemplate = {
 
 * `onCreateConfiguration` - this is called when the default configuration for the site is created. You are passed the project configuration object before it is saved. It will be a combination of the default configuration, the site configuration and any overrides you specify in your template in the static configuration. Every value should be available here so you can inspect and change any configuration.
 * `beforeForkDocument` - This is called before the capture model is saved. It will contain a reference to the original capture model template so you cannot change any properties on the document passed in, but you can return a new document and this will be used instead.
-* `onCreateProject` - Once the project is fully created this will be called with the project. 
+* `onCreateProject` - Once the project is fully created this will be called with the project.&#x20;
 
 ### Hooks
 
@@ -285,7 +287,7 @@ This is a provisional list of hooks yet to be implemented. When each hook is cal
 * `onSubmitRevision` - Hook just _after_ a user has saved a submission
 * `onRevisionApproved` - When a user submission has been approved by a reviewer
 * `onRevisionRejected` - When a user submission has been rejected by a reviewer
-* `onResourceComplete` - When a canvas, manifest or collection is marked as complete \(or when all sub-resources are complete\)
+* `onResourceComplete` - When a canvas, manifest or collection is marked as complete (or when all sub-resources are complete)
 * `onCreateReview` - When a review is created.
 * `onAssignReview` - When a reviewer is assigned to a review.
 
@@ -296,5 +298,4 @@ This is a provisional list of hooks yet to be implemented. When each hook is cal
 
 ## Project templates from content
 
-Not covered in this document or pull request is the ability to create a project from a manifest or a collection. This will make it much easier to get started with projects quickly. Ideally when you are on a manifest and you choose "Create transcription project" or "Crowdsource OCR corrections" from a manifest or collection page it will give the user the option to either create a fresh new project or add it to an existing project of the same type \(i.e. same project template\).
-
+Not covered in this document or pull request is the ability to create a project from a manifest or a collection. This will make it much easier to get started with projects quickly. Ideally when you are on a manifest and you choose "Create transcription project" or "Crowdsource OCR corrections" from a manifest or collection page it will give the user the option to either create a fresh new project or add it to an existing project of the same type (i.e. same project template).

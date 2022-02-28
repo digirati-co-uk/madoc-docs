@@ -1,82 +1,46 @@
 # Madoc API
 
-{% api-method method="get" host="" path="/api/madoc/projects/:project\_id/personal-notes/:resource\_id" %}
-{% api-method-summary %}
-Current users notes for an object
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/api/madoc/projects/:project_id/personal-notes/:resource_id" method="get" summary="Current users notes for an object" %}
+{% swagger-description %}
 View any notes made by the user in a project on a specific resource
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="resource\_id" type="number" required=true %}
+{% swagger-parameter in="path" name="resource_id" type="number" %}
 Numeric identifier of canvas
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="project\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="project_id" type="string" %}
 Numeric identifier or slug of project
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-You will always be returned a note if the user is able to make a note. If no note exists in the database, an empty note will be returned.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="You will always be returned a note if the user is able to make a note. If no note exists in the database, an empty note will be returned." %}
+```
 {
   "note": "A note made by a user"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="put" host="" path="/api/madoc/projects/:project\_id/personal-notes/:resource\_id" %}
-{% api-method-summary %}
-Update users note for an object
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="" path="/api/madoc/projects/:project_id/personal-notes/:resource_id" method="put" summary="Update users note for an object" %}
+{% swagger-description %}
 Update the contents of a users note
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="project\_id" type="string" required=true %}
+{% swagger-parameter in="path" name="project_id" type="string" %}
 Numeric identifier or slug of a project
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="resource\_id" type="number" required=true %}
+{% swagger-parameter in="path" name="resource_id" type="number" %}
 Numeric identifier of canvas
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="note" type="string" required=true %}
+{% swagger-parameter in="body" name="note" type="string" %}
 The updated note
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-No body will be returned after creation.
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="201" description="No body will be returned after creation." %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+```
+{% endswagger-response %}
+{% endswagger %}
