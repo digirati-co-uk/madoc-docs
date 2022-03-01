@@ -6,10 +6,10 @@ The primary building block for content in Madoc is IIIF (International Image Int
 
 ## Jump to section
 
-* \*\*\*\*[**Creating IIIF collections**](collections.md#creating-a-new-collection)\*\*\*\*
-* \*\*\*\*[**Importing IIIF collections**](collections.md#importing-an-existing-collection)\*\*\*\*
-* \*\*\*\*[**Importing IIIF Manifests**](manifests.md#importing-an-existing-manifest)\*\*\*\*
-* \*\*\*\*[**Managing canvases**](canvases.md)\*\*\*\*
+* [**Creating IIIF collections**](collections.md#creating-a-new-collection)
+* [**Importing IIIF collections**](collections.md#importing-an-existing-collection)
+* [**Importing IIIF Manifests**](manifests.md#importing-an-existing-manifest)
+* [**Managing canvases**](canvases.md)
 
 ### Canvas
 

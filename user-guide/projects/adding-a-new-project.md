@@ -2,11 +2,17 @@
 
 You can navigate to your projects from the left hand navigation in the admin.
 
-On the main projects page you will see a list of all of the projects that are running on your site. There will be 5 projects shown per page and you can page through if you have more. To create a new project click on the button in the top left corner.
+![](<../../.gitbook/assets/Screenshot 2022-03-01 at 10.22.21.png>)
 
-![](<../../.gitbook/assets/Screenshot 2021-05-06 at 17.20.59.png>)
+On the main projects page you will see a list of all of the projects that are running on your site. Projects are listed in a paginated list and you can page through if you have more. To create a new project click on the button at the top.
 
-Here you will be prompted to add a label, description and a slug for your project. The slug will be used in the URL when navigating the frontend site.
+![](<../../.gitbook/assets/Screenshot 2022-03-01 at 10.23.28.png>)
+
+When you create a project you can choose a project template, or create a custom project. Each of the project templates should have their own documentation linked.
+
+![](<../../.gitbook/assets/Screenshot 2022-03-01 at 10.24.18.png>)
+
+You will be guided through a form to fill in some information about your project. You will be prompted to add a label, description and a slug for your project. The slug will be used in the URL when navigating the frontend site. You can change these labels later, you cannot easily change the "slug" after this point.
 
 ![](<../../.gitbook/assets/Screenshot 2021-05-06 at 17.22.08.png>)
 

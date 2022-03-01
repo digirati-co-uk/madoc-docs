@@ -8,21 +8,3 @@ Madoc is a platform that enables you to run both crowdsourcing and machine-assis
 * IIIF Management
 * Enrichment
 * Search
-
-**User guide**
-
-* [x] [Managing IIIF](user-guide/managing-iiif/)
-  * [ ] Language fields \(new\)
-* [x] [Users](user-guide/users.md)
-* [x] [Projects](user-guide/projects/)
-* [ ] Tasks
-* [ ] Capture models
-* [ ] Reviews
-* [ ] OCR
-* [ ] Configuration
-* [ ] Workflows
-* [ ] Site navigation
-* [ ] Making contributions
-* [ ] Browsing the site
-* [ ] Search
-

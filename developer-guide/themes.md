@@ -1,6 +1,6 @@
 # Themes
 
-Madoc support creating custom themes.
+Madoc support creating custom themes on Disk. You can also include themes in a plugin ([example](https://github.com/stephenwf/madoc-example-plugin/blob/main/src/plugin.ts#L35))
 
 
 
