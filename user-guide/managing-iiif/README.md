@@ -1,8 +1,8 @@
 # Managing IIIF
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image.png)
 
-The primary building block for content in Madoc is IIIF \(International Image Interoperability Framework™\). IIIF is a set of open standards for standardising access to images and collections of images. There are 3 primary building blocks that make up IIIF.
+The primary building block for content in Madoc is IIIF (International Image Interoperability Framework™). IIIF is a set of open standards for standardising access to images and collections of images. There are 3 primary building blocks that make up IIIF.
 
 ## Jump to section
 
@@ -31,9 +31,8 @@ From the IIIF Specification:
 
 ### Collection
 
-A IIIF collection is a set of one or more manifests \(and/or other collections\) and provides an organisational tool for grouping together objects.
+A IIIF collection is a set of one or more manifests (and/or other collections) and provides an organisational tool for grouping together objects.
 
 From the IIIF Specification:
 
 > An ordered list of Manifests, and/or further Collections. Collections allow Manifests and child Collections to be grouped in a hierarchical structure for presentation, which can be for generating navigation, showing dynamic results from a search, or providing fixed sets of related resources for any other purpose.
-

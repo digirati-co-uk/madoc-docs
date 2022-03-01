@@ -5,7 +5,7 @@ The final tab is the "Crowdsourcing" tab. This is where you can see all of the t
 * **Collection** - Each collection in your project
   * **Manifest** - All of the manifests in the collection
     * **Manifest crowdsourcing task** - A task that represents a whole manifest
-    * **Manifest crowdsourcing review** - A review of a crowdsourcing manifest task \(above\).
+    * **Manifest crowdsourcing review** - A review of a crowdsourcing manifest task (above).
     * **Canvas** - All of the canvases in the manifest
       * **Canvas crowdsourcing task** - All of the crowdsourcing contributions to this canvas
       * **Canvas crowdsourcing review** - All of the reviews for this manifest
@@ -18,9 +18,8 @@ This information is also available on the frontend of the site, but can be usefu
 
 You can also see an overview of your projects progress on the "Overview" tab.
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](<../../.gitbook/assets/image (4).png>)
 
 {% hint style="info" %}
 We try our best to show accurate statistics here, but cannot guarantee this if content is added or removed during the lifetime of the project.
 {% endhint %}
-

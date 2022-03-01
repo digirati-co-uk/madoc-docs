@@ -4,9 +4,8 @@ When a user submits their contribution to your project it will be put into a rev
 
 At its core, a review is a [**task**](../../incomplete-user-guide/tasks/) that is assigned to a reviewer that points to one or more contribution tasks from users.
 
-![](../../.gitbook/assets/screenshot-2021-05-07-at-11.40.52.png)
+![](<../../.gitbook/assets/Screenshot 2021-05-07 at 11.40.52.png>)
 
 Each submission from users can be actioned, with the goal of either approving or rejecting the submission.
 
-![](../../.gitbook/assets/screenshot-2021-05-07-at-11.42.40.png)
-
+![](<../../.gitbook/assets/Screenshot 2021-05-07 at 11.42.40.png>)

@@ -10,9 +10,8 @@ The default page for the canvas is the deep zoom page. Here you can make sure th
 
 Similar to manifests and collections you can edit any attached metadata or simply update the label of a canvas.
 
-![](../../.gitbook/assets/screenshot-2020-09-02-at-21.16.52.png)
+![](<../../.gitbook/assets/Screenshot 2020-09-02 at 21.16.52.png>)
 
 ## Seeing linking properties
 
 Similar to manifests you can see any external links that have been detected and imported. These are used in other parts of the system to provide features such as OCR correction. In the future you may be able to manage and add new links.
-

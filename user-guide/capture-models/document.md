@@ -77,7 +77,7 @@ This is the format in its verbose form and how it's stored and transported. Howe
 
 We have also created a UI that lets you build these capture models up.
 
-![](../../.gitbook/assets/screenshot-2021-05-06-at-18.13.25.png)
+![](<../../.gitbook/assets/Screenshot 2021-05-06 at 18.13.25.png>)
 
 ### Short hand
 
@@ -108,7 +108,7 @@ The capture model format is a verbose format made to be verifiably correct and p
 {% endtab %}
 
 {% tab title="Output JSON" %}
-```text
+```
 {
   "name": ""
 }
@@ -116,7 +116,7 @@ The capture model format is a verbose format made to be verifiably correct and p
 {% endtab %}
 
 {% tab title="User preview" %}
-![](../../.gitbook/assets/screenshot-2021-05-06-at-18.04.48.png)
+![](<../../.gitbook/assets/Screenshot 2021-05-06 at 18.04.48.png>)
 {% endtab %}
 {% endtabs %}
 
@@ -160,7 +160,7 @@ The short hand allows you to describe your field quickly and generate the defaul
 {% endtab %}
 
 {% tab title="User preview" %}
-![](../../.gitbook/assets/screenshot-2021-05-06-at-18.09.16.png)
+![](<../../.gitbook/assets/Screenshot 2021-05-06 at 18.09.16.png>)
 {% endtab %}
 {% endtabs %}
 
@@ -178,15 +178,15 @@ const document = captureModelShortHand({
 
 All of the field types are available in the capture model [Storybook](https://capture-models.netlify.app/?path=/story/input-types-autocomplete--with-field-wrapper) where you can preview each.
 
-| Name | Description |
-| :--- | :--- |
-| **Autocomplete** | An autocomplete box that allows you to connect a compatible endpoint and search for values to be used as the value. |
-| **Checkbox** | Single checkbox with an optional inline label giving you a boolean value in your document. |
-| **Checkbox list** | List of checkboxes, each with a label and a key. Will result in a map of the values and a boolean value. |
-| **Dropdown** | Fixed dropdown with labels/values for multiple values. |
-| **HTML** | A very simple WYSIWYG for creating formatted HTML snippets. |
-| **Tagged text** | A custom component created for one of our partners for transcribing text with tags such as super script, deletions or unclear text |
-| **Text field** | A single or multi-line text input. |
+| Name              | Description                                                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Autocomplete**  | An autocomplete box that allows you to connect a compatible endpoint and search for values to be used as the value.                |
+| **Checkbox**      | Single checkbox with an optional inline label giving you a boolean value in your document.                                         |
+| **Checkbox list** | List of checkboxes, each with a label and a key. Will result in a map of the values and a boolean value.                           |
+| **Dropdown**      | Fixed dropdown with labels/values for multiple values.                                                                             |
+| **HTML**          | A very simple WYSIWYG for creating formatted HTML snippets.                                                                        |
+| **Tagged text**   | A custom component created for one of our partners for transcribing text with tags such as super script, deletions or unclear text |
+| **Text field**    | A single or multi-line text input.                                                                                                 |
 
 Together these fields types let you build up complex data models for users to easily fill out.
 
@@ -277,4 +277,3 @@ When a user submits their contribution to an images capture model, the informati
 ```
 
 This model is described in more detail in the developer documentation. This plays a role in Madoc when a user loads up a capture model for an image. They will only see published fields and their own revisions and not other users submissions that have not been accepted.
-

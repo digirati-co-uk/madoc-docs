@@ -6,11 +6,11 @@
 
 It depends on a few factors.
 
-1. Do the fields being targeted in the [structure](capture-models/structure.md) allow multiple instances? 
+1. Do the fields being targeted in the [structure](capture-models/structure.md) allow multiple instances?&#x20;
 2. Is the project configured to allow multiple contributions?
 3. Has the user submitted in transcriber mode?
 
-**1.** This is the most complicated. If you were running a transcription project with a single field for that transcription in your document \(allowMultiple = false\) then if a user did submit twice they would be submitting 2 different replacement transcriptions. They would appear in the review interface as 2 submissions. However the same [review process](reviews/merging-submissions.md) applies and only one will be canonical. However if you were running a project and the model did allow multiple submissions - like identifying people - those could both be approved and all of the people would be accepted. For more complex structures with mixes of these types of field it depends on the [model root](technical-faq.md#model-root) and the existing data.
+**1.** This is the most complicated. If you were running a transcription project with a single field for that transcription in your document (allowMultiple = false) then if a user did submit twice they would be submitting 2 different replacement transcriptions. They would appear in the review interface as 2 submissions. However the same [review process](reviews/merging-submissions.md) applies and only one will be canonical. However if you were running a project and the model did allow multiple submissions - like identifying people - those could both be approved and all of the people would be accepted. For more complex structures with mixes of these types of field it depends on the [model root](technical-faq.md#model-root) and the existing data.
 
 **2.** If a project is configured to allow multiple contributions then users will be allowed to submit more than one while the resource is not yet marked as complete. There is a separate configuration option to allow submissions _after_ a resource is marked as complete.
 
@@ -26,10 +26,10 @@ There are a few cases where canvases or manifests may be randomly assigned or na
 
 There are 2 more edge cases where the random process is less random.
 
-**1. The project is set with a claim granularity of manifest**  
+**1. The project is set with a claim granularity of manifest**\
 In this case it would not be ideal for users to be taken to a random canvas half way through a manifest if users are expected to work through all of the manifests. Instead they will go to the first canvas in a random manifest.
 
-**2. The project is configured with "**_**Prioritise \[x\] sequentially**_**"**  
+**2. The project is configured with "**_**Prioritise \[x] sequentially**_**"**\
 Sometimes you want to work through a project roughly from start to finish but still spread users out to different resources. When this configuration is set, users will be given a random resource but much more likely to be from the next 5-10 resources.
 
 When selecting a random resource a set of available resources matching all of the above conditions is pooled together in the order they appear and one resource is randomly chosen.
@@ -40,7 +40,7 @@ When selecting a random resource a set of available resources matching all of th
 This refers to marking as complete in relation to a project as a whole. Users may see manifests that they have completed showing as complete, like in transcription mode.
 {% endhint %}
 
-A canvas is marked as complete during the review process. When a crowdsourcing task is marked as complete we check if the number of accepted contributions has reached the configuration value "_Submission approvals required_". This value is set when a crowdsourcing task is [prepared](technical-faq.md#prepare-step) and can be changed on a per-resource bases on the canvas page in the details tab. If this is set to a very high number, the canvas can be manually marked as complete and prevent further submissions \(if that configuration value is set as such\) or simply indicate to other contributors that the resource is done.
+A canvas is marked as complete during the review process. When a crowdsourcing task is marked as complete we check if the number of accepted contributions has reached the configuration value "_Submission approvals required_". This value is set when a crowdsourcing task is [prepared](technical-faq.md#prepare-step) and can be changed on a per-resource bases on the canvas page in the details tab. If this is set to a very high number, the canvas can be manually marked as complete and prevent further submissions (if that configuration value is set as such) or simply indicate to other contributors that the resource is done.
 
 Once all of the canvases in a manifest have been marked as complete, the manifest itself is marked as complete.
 
@@ -64,11 +64,11 @@ This feature is not compatible with many configuration values and **should be av
 
 If you prevent users from navigating to canvases then users will be able to browse manifests in your project but not be able to browse the images inside. With only this configuration chosen users will not be able to contribute to your project. You will have to assign resources manually. Administrators and reviewers will still be able to browse the images.
 
-![This is displayed to users in place of the manifest images](../.gitbook/assets/screenshot-2021-05-07-at-17.39.17.png)
+![This is displayed to users in place of the manifest images](<../.gitbook/assets/Screenshot 2021-05-07 at 17.39.17.png>)
 
 If you also choose "Randomly assign canvas to user" then in addition to not being able to browse a manifests images, they will be able to be randomly assigned an image.
 
-![This is displayed in place of the manifest images](../.gitbook/assets/screenshot-2021-05-07-at-17.41.10.png)
+![This is displayed in place of the manifest images](<../.gitbook/assets/Screenshot 2021-05-07 at 17.41.10.png>)
 
 If you prevent users from navigating to manifests then they will only be able to work on resources that have been assigned to them.
 
@@ -116,12 +116,12 @@ It is recommended to create [invitations](users.md#inviting-users-to-projects) f
 
 ### Error when creating or registering users or forgot password is not working
 
-If you experience an error when creating users you need to configure Omeka with an SMTP server. Configuration can be found [here](https://omeka.org/s/docs/user-manual/configuration/#mail) which in turn is driven by the following environment variables in the madoc \(not to be confused with [madoc-ts](technical-faq.md#madoc-vs-madoc-ts)\)
+If you experience an error when creating users you need to configure Omeka with an SMTP server. Configuration can be found [here](https://omeka.org/s/docs/user-manual/configuration/#mail) which in turn is driven by the following environment variables in the madoc (not to be confused with [madoc-ts](technical-faq.md#madoc-vs-madoc-ts))
 
-| Environment variable | description |
-| :--- | :--- |
-| `OMEKA__SMTP_HOST` | Host for SMTP server |
-| `OMEKA__SMTP_SECURITY` | Security for SMTP \(`tls`\) |
+| Environment variable   | description                               |
+| ---------------------- | ----------------------------------------- |
+| `OMEKA__SMTP_HOST`     | Host for SMTP server                      |
+| `OMEKA__SMTP_SECURITY` | Security for SMTP (`tls`)                 |
 | `OMEKA__SMTP_USERNAME` | Username to authenticate with SMTP server |
 | `OMEKA__SMTP_PASSWORD` | Password to authenticate with SMTP server |
 
@@ -131,7 +131,7 @@ Additional configuration for Omeka can be found at `/srv/omeka/application/confi
 
 ### Madoc vs Madoc TS
 
-Originally Madoc was built using PHP in the form of Omeka-S modules. Since 2019 however the frontend of Madoc has transitioned to use server-side rendered React + Typescript \(Madoc TS\). This focus on a Typescript frontend has accelerated the development of custom administrator interfaces for managing complex data such as capture models and IIIF. Most development is done in Madoc TS and has grown to replace some of the functionality previous provided by Omeka. Today, Omeka provides users and sites with their associated roles. To reduce complexity, this might be simplified in the future.
+Originally Madoc was built using PHP in the form of Omeka-S modules. Since 2019 however the frontend of Madoc has transitioned to use server-side rendered React + Typescript (Madoc TS). This focus on a Typescript frontend has accelerated the development of custom administrator interfaces for managing complex data such as capture models and IIIF. Most development is done in Madoc TS and has grown to replace some of the functionality previous provided by Omeka. Today, Omeka provides users and sites with their associated roles. To reduce complexity, this might be simplified in the future.
 
 ### **Model root**
 
@@ -139,7 +139,7 @@ The model root is an option in a capture model structure that drives at what lev
 
 {% tabs %}
 {% tab title="Model root = line" %}
-```text
+```
 page -> line -> word
              \ 
               -> new word
@@ -147,7 +147,7 @@ page -> line -> word
 {% endtab %}
 
 {% tab title="Model root = page" %}
-```text
+```
 page -> line -> word
     \ 
      -> line 2 -> new word
@@ -161,11 +161,10 @@ Since this problem is a complex UI and UX issue for displaying editing UIs it is
 
 ### **Prepare step**
 
-![This is what happens when a resource is prepared for contribution](../.gitbook/assets/image%20%286%29.png)
+![This is what happens when a resource is prepared for contribution](<../.gitbook/assets/image (6).png>)
 
 ### **Claim and update claim step**
 
-![This is what happens when a user creates or updates a submission](../.gitbook/assets/image%20%285%29.png)
+![This is what happens when a user creates or updates a submission](<../.gitbook/assets/image (5).png>)
 
 These diagrams show the process for when a user _can_ contribute. During the create and update step we further verify that the resource can be contributed to.
-
