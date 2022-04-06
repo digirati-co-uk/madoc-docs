@@ -41,6 +41,7 @@
   * [Site-wide configuration](user-guide/configuration/site-wide-configuration.md)
   * [Project configuration](user-guide/configuration/project-configuration.md)
   * [Configuration reference](user-guide/configuration/configuration-reference.md)
+  * [Annotation styling](user-guide/configuration/annotation-styling.md)
 * [Technical FAQ](user-guide/technical-faq.md)
 
 ## Incomplete user guide
